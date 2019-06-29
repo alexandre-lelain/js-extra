@@ -4,12 +4,13 @@ const count = (array: Array<number | string | boolean>, itemToCount: number | st
       (itemCounts: number, item: number | string | boolean) => (itemCounts += item === itemToCount ? 1 : 0),
       0,
     );
-  }
-  catch (e) {
+  } catch (e) {
     if (!Array.isArray(array)) {
-      throw "The first argument of js-extra count() function must be of type Array<number | string | boolean>."
+      throw new Error(
+        'The first argument of js-extra count() function must be of type Array<number | string | boolean>.',
+      );
     }
-    return null;
+    throw e;
   }
 };
 
