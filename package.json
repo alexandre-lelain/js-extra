@@ -7,6 +7,7 @@
   "repository": "git@github.com:alexandre-lelain/js-extra.git",
   "author": "Alexandre Le Lain <lelain.alexandre@gmail.com>",
   "license": "MIT",
+  "keywords": ["Javascript", "functions", "helpers"],
   "scripts": {
     "build": "tsc",
     "lint": "tslint -p tsconfig.json",
