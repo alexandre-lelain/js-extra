@@ -1,3 +1,6 @@
+/**
+ * This function sorts an array of number or string in descending order.
+ */
 const sortDesc = (array: Array<number | string>): Array<number | string> => {
   try {
     return array.sort((a: any, b: any) => {

@@ -1,3 +1,6 @@
+/**
+ * This function sorts an array of number or string in ascending order.
+ */
 const sortAsc = (array: Array<number | string>): Array<number | string> | null => {
   try {
     return array.sort((a: any, b: any) => {

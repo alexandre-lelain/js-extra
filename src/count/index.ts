@@ -1,3 +1,7 @@
+/**
+ * This function counts and returns the number of occurences of the value
+ * itemToCount in the array provided.
+ */
 const count = (array: Array<number | string | boolean>, itemToCount: number | string | boolean): number | null => {
   try {
     return array.reduce(

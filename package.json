@@ -10,6 +10,7 @@
   "keywords": ["Javascript", "functions", "helpers"],
   "scripts": {
     "build": "tsc",
+    "doc": "yarn typedoc --out docs src/ --exclude **/tests/* --module commonjs --target ES6 --tsconfig ./tsconfig.json --ignoreCompilerErrors",
     "lint": "tslint -p tsconfig.json",
     "prettier": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "prepare": "yarn build",
