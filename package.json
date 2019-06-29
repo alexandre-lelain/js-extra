@@ -2,7 +2,8 @@
   "name": "js-extra",
   "version": "1.0.0",
   "description": "Does what native Javascript doesn't.",
-  "main": "src/index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "repository": "git@github.com:alexandre-lelain/js-extra.git",
   "author": "Alexandre Le Lain <lelain.alexandre@gmail.com>",
   "license": "MIT",
@@ -10,7 +11,12 @@
     "build": "tsc",
     "lint": "tslint -p tsconfig.json",
     "prettier": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "test": "jest"
+    "prepare": "yarn build",
+    "prepublishOnly" : "yarn test && yarn lint",
+    "preversion" : "yarn lint",
+    "postversion" : "git push && git push --tags",
+    "test": "jest",
+    "version" : "yarn prettier && git add -vA src"
   },
   "devDependencies": {
     "@types/jest": "^24.0.15",
