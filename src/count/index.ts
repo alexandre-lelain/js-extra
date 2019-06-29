@@ -1,4 +1,4 @@
-const count = (array: Array<number | string | boolean>, itemToCount: number | string | boolean) => {
+const count = (array: Array<number | string | boolean>, itemToCount: number | string | boolean): number | null => {
   try {
     return array.reduce(
       (itemCounts: number, item: number | string | boolean) => (itemCounts += item === itemToCount ? 1 : 0),
@@ -9,6 +9,7 @@ const count = (array: Array<number | string | boolean>, itemToCount: number | st
     if (!Array.isArray(array)) {
       throw "The first argument of js-extra count() function must be of type Array<number | string | boolean>."
     }
+    return null;
   }
 };
 
