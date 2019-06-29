@@ -39,3 +39,8 @@ test('count(BOOLEAN_ARRAY, 42) to equal 0', () => {
 test('count(BOOLEAN_ARRAY, false) to equal 1', () => {
   expect(count(BOOLEAN_ARRAY, false)).toBe(1);
 });
+
+//Exceptions tests
+test('count("not an array", 42) to throw an error on 1st argument type', () => {
+  expect(() => count("not an array", 42)).toThrow();
+});
