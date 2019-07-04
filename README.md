@@ -4,7 +4,7 @@
 
 Does what native Javascript doesn't.
 
-[js-extra docs](https://alexandre-lelain.github.io/js-extra/)
+[js-extra docs](https://js-extra.netlify.com/)
 
 ## Motivation
 
@@ -50,7 +50,7 @@ ES5
 var count = require('js-extra').count
 ```
 
-You can find all the implemented & available functions of the lib [here](https://alexandre-lelain.github.io/js-extra/)
+You can find all the implemented & available functions of the lib [here](https://js-extra.netlify.com/)
 
 ## Contributing
 
