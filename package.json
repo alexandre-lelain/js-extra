@@ -5,7 +5,10 @@
   "homepage": "https://alexandre-lelain.github.io/js-extra/",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "repository": "git@github.com:alexandre-lelain/js-extra.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexandre-lelain/js-extra"
+  },
   "author": "Alexandre Le Lain <lelain.alexandre@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -15,8 +18,8 @@
   ],
   "scripts": {
     "build": "tsc",
-    "doc": "yarn typedoc --out docs src/ --exclude **/tests/* --module commonjs --target ES6 --tsconfig ./tsconfig.json --ignoreCompilerErrors",
-    "deploy": "yarn doc && gh-pages -d docs -t -a",
+    "doc": "yarn docsify serve docs",
+    "deploy": "gh-pages -d docs -t -a",
     "lint": "tslint -p tsconfig.json",
     "prettier": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "prepare": "yarn build",
@@ -28,13 +31,13 @@
   },
   "devDependencies": {
     "@types/jest": "^24.0.15",
+    "docsify-cli": "^4.3.0",
     "gh-pages": "^2.0.1",
     "jest": "^24.8.0",
     "prettier": "^1.18.2",
     "ts-jest": "^24.0.2",
     "tslint": "^5.18.0",
     "tslint-config-prettier": "^1.18.0",
-    "typedoc": "^0.14.2",
     "typescript": "^3.5.2"
   }
 }
