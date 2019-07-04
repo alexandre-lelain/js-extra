@@ -4,7 +4,7 @@
 
 Does what native Javascript doesn't.
 
-<a id="apiLink" href="/#/api">API</a>
+<a id="apiLink" href="#/api">API</a>
 
 ## Motivation
 
