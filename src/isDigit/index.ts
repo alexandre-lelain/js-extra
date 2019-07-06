@@ -4,7 +4,9 @@
  * False- If the string contains 1 or more non-digits.
  */
 const isDigit = (str: string): boolean => {
-  if (typeof str !== 'string') return false;
+  if (typeof str !== 'string') {
+    return false;
+  }
   return /^[0-9]+$/.test(str);
 };
 
