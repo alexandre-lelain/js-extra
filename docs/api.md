@@ -24,6 +24,54 @@ count(["js-extra", "rocks", "hello", "js-extra", "js-extra"], "js-extra");
 // => 3
 ```
 
+## isAlpha(value)
+
+This function returns true if the string provided contains only alphabetical characters,
+false else.
+
+### Arguments
+
+- **value (string)**: the string to process.
+
+### returns
+
+- **(boolean)**: returns *true* if values only contains alphabetical characters, *false* else.
+
+### Examples
+
+```js
+isAlpha("jsextrarocks");
+// => true
+isAlpha("jsextrarocks42");
+// => false
+isAlpha(42);
+// => false
+```
+
+## isDigit(value)
+
+This function returns true if the string provided contains only digits,
+false else.
+
+### Arguments
+
+- **value (string)**: the string to process.
+
+### returns
+
+- **(boolean)**: returns *true* if values only contains digits, *false* else.
+
+### Examples
+
+```js
+isDigit("42");
+// => true
+isDigit("jsextrarocks42");
+// => false
+isDigit("");
+// => false
+```
+
 ## sortAsc(array)
 
 This function sorts an array of number or string in ascending order. The strings
