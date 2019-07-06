@@ -10,6 +10,9 @@
     "url": "https://github.com/alexandre-lelain/js-extra"
   },
   "author": "Alexandre Le Lain <lelain.alexandre@gmail.com>",
+  "contributors": [
+    "Vincent Lacour (https://github.com/LacourVincent)"
+  ],
   "license": "MIT",
   "keywords": [
     "Javascript",
