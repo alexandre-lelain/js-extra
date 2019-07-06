@@ -1,3 +1,9 @@
+# 1.0.3
+
+## features
+
+* Add **isAlpha** & **isDigit** functions. ([@LacourVincent](https://github.com/LacourVincent))
+
 # 1.0.2
 
 ## features
