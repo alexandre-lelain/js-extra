@@ -21,6 +21,7 @@
     "doc": "yarn docsify serve docs",
     "lint": "tslint -p tsconfig.json",
     "prettier": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "validate": "yarn lint && yarn prettier",
     "prepare": "yarn build",
     "prepublishOnly": "yarn test && yarn lint",
     "preversion": "yarn lint",
