@@ -2,12 +2,14 @@
 
 ## count(array, toCount)
 
-This function returns the number of occurrences of the specified value in the array provided.
+This function returns the number of occurrences of *toCount* in the *array* provided.
+You can either use this function to count the number of occurrences of a simple-typed value (number, string or boolean),
+or also use a predicate function if you want to count some complex-typed objects based on your own logic.
 
 ### Arguments
 
 - **array (Array<number | string | boolean | object>)**: the array to process.
-- **toCount (number | string | boolean | Function)**: the item to count or the predicate function to apply on each item.
+- **toCount (number | string | boolean | predicate: Function)**: the item to count or the predicate function to apply on each item.
 
 ### returns
 
