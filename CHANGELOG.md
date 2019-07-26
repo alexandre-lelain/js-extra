@@ -1,3 +1,9 @@
+# 1.0.4
+
+## features
+
+* Enhance the **count** function to count the number of objects matching a predicate. ([@GDarchen](https://github.com/gdarchen))
+  
 # 1.0.3
 
 ## features

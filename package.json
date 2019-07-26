@@ -1,6 +1,6 @@
 {
   "name": "js-extra",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Does what native Javascript doesn't.",
   "homepage": "https://js-extra.netlify.com/",
   "main": "lib/index.js",
@@ -11,7 +11,8 @@
   },
   "author": "Alexandre Le Lain <lelain.alexandre@gmail.com>",
   "contributors": [
-    "Vincent Lacour (https://github.com/LacourVincent)"
+    "Vincent Lacour (https://github.com/LacourVincent)",
+    "Gautier Darchen (https://github.com/gdarchen)"
   ],
   "license": "MIT",
   "keywords": [

@@ -1,17 +1,17 @@
 # API
 
-## count(array, item)
+## count(array, toCount)
 
 This function returns the number of occurrences of the specified value in the array provided.
 
 ### Arguments
 
-- **array (Array<number | string | boolean>)**: the array to process.
-- **item (number | string | boolean)**: the item to count.
+- **array (Array<number | string | boolean | object>)**: the array to process.
+- **toCount (number | string | boolean | Function)**: the item to count or the predicate function to apply on each item.
 
 ### returns
 
-- **(number)**: the number of occurrences of item in array.
+- **(number)**: the number of occurrences of item in array or the number of items satisfying the predicate condition.
 
 ### Examples
 
@@ -22,6 +22,8 @@ count([4, 2, 3, 4], 42);
 // => 0
 count(["js-extra", "rocks", "hello", "js-extra", "js-extra"], "js-extra");
 // => 3
+count([{ id: 1, name: "js" }, { id: 2, name: "extra" }, { id: 3, name: "js" }], (item) => item.name === "js");
+// => 2
 ```
 
 ## isAlpha(value)
