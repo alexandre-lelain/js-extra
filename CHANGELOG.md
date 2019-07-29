@@ -4,6 +4,8 @@
 
 * Add **redesign** function to filter & transform an array. ([@alexandre-lelain](https://github.com/alexandre-lelain))
 
+* Improve style of types in the api's docs. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.0.4
 
 ## features

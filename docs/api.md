@@ -8,12 +8,12 @@ or also use a predicate function if you want to count some complex-typed objects
 
 ### Arguments
 
-- **array (Array<number | string | boolean | object>)**: the array to process.
-- **toCount (number | string | boolean | predicate: Function)**: the item to count or the predicate function to apply on each item.
+- **array *(Array<number | string | boolean | object>)***: the array to process.
+- **toCount *(number | string | boolean | predicate: Function)***: the item to count or the predicate function to apply on each item.
 
 ### returns
 
-- **(number)**: the number of occurrences of item in array or the number of items satisfying the predicate condition.
+- ***(number)***: the number of occurrences of item in array or the number of items satisfying the predicate condition.
 
 ### Examples
 
@@ -35,11 +35,11 @@ false else.
 
 ### Arguments
 
-- **value (string)**: the string to process.
+- **value *(string)***: the string to process.
 
 ### returns
 
-- **(boolean)**: returns *true* if values only contains alphabetical characters, *false* else.
+- ***(boolean)***: returns *true* if values only contains alphabetical characters, *false* else.
 
 ### Examples
 
@@ -59,11 +59,11 @@ false else.
 
 ### Arguments
 
-- **value (string)**: the string to process.
+- **value *(string)***: the string to process.
 
 ### returns
 
-- **(boolean)**: returns *true* if values only contains digits, *false* else.
+- ***(boolean)***: returns *true* if values only contains digits, *false* else.
 
 ### Examples
 
@@ -90,15 +90,15 @@ Important: the **array** given is **not** modified during the process.
 
 ### Arguments
 
-- **array (Array<number | string | boolean | object>)**: the array to process.
-- **[options={}]**: the options object.
-- **[options.compact=false] (boolean)**: the options object.
-- **[options.filter=()=>true] (predicate: Function)**: the predicate filter function to apply to the array.
-- **[options.transform=noop] (Function)**: the transform function to apply to the array.
+- **array *(Array<number | string | boolean | object>)***: the array to process.
+- **[options={}] *(Object)***: the options object.
+- **[options.compact=false] *(boolean)***: the options object.
+- **[options.filter=()=>true] *(predicate: Function)***: the predicate filter function to apply to the array.
+- **[options.transform=noop] *(Function)***: the transform function to apply to the array.
 
 ### returns
 
-- **(Array<number | string | boolean | object>)**: returns the array redesigned.
+- ***(Array<number | string | boolean | object>)***: returns the array redesigned.
 
 ### Examples
 
@@ -122,11 +122,11 @@ are compared using [localeCompare()](https://developer.mozilla.org/fr/docs/Web/J
 
 ### Arguments
 
-- **array (Array<number | string>)**: the array to process.
+- **array *(Array<number | string>)***: the array to process.
 
 ### returns
 
-- **array (Array<number | string>)**: the array sorted in ascending order.
+- **array *(Array<number | string>)***: the array sorted in ascending order.
 
 ### Examples
 
@@ -144,11 +144,11 @@ are compared using [localeCompare()](https://developer.mozilla.org/fr/docs/Web/J
 
 ### Arguments
 
-- **array (Array<number | string>)**: the array to process.
+- **array *(Array<number | string>)***: the array to process.
 
 ### returns
 
-- **array (Array<number | string>)**: the array sorted in descending order.
+- **array *(Array<number | string>)***: the array sorted in descending order.
 
 ### Examples
 
