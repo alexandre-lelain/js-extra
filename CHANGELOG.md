@@ -1,9 +1,15 @@
+# 1.0.5
+
+## features
+
+* Add **redesign** function to filter & transform an array. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.0.4
 
 ## features
 
 * Enhance the **count** function to count the number of objects matching a predicate. ([@GDarchen](https://github.com/gdarchen))
-  
+
 # 1.0.3
 
 ## features

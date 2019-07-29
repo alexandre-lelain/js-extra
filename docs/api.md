@@ -76,6 +76,45 @@ isDigit("");
 // => false
 ```
 
+## redesign(array, [options={}])
+
+redesign is a function that allows you to shape & cut a given **array**. You can
+give it a `filter` predicate function to filter the elements of your array.
+You can also give it a `transform` function to transform the elements of your array.
+And you can also chose to make the redesign `compact`, thus removing any falsey
+values from it.
+
+It will return an empty array of you haven't given any, or if you gave an empty array.
+
+Important: the **array** given is **not** modified during the process.
+
+### Arguments
+
+- **array (Array<number | string | boolean | object>)**: the array to process.
+- **[options={}]**: the options object.
+- **[options.compact=false] (boolean)**: the options object.
+- **[options.filter=()=>true] (predicate: Function)**: the predicate filter function to apply to the array.
+- **[options.transform=noop] (Function)**: the transform function to apply to the array.
+
+### returns
+
+- **(Array<number | string | boolean | object>)**: returns the array redesigned.
+
+### Examples
+
+```js
+redesign();
+// => []
+redesign([1, 2, 5, 15, 3 ,9], { filter: n => n > 3, transform: n => n - 1 });
+// => [4, 14, 8]
+redesign([42, 'js', null, 'extra', undefined, false], { transform: n => n + 42, compact: true });
+// => [84, 'js42', 'extra42']
+
+const array = [{ id: 1, name: "js" }, { id: 2, name: "extra" }, { id: 3, name: "js" }]
+redesign(array, { filter: item => item.name === "js", transform: item => ({ ...item, name: item.name + '-extra' }) });
+// => [{ id: 1, name: "js-extra" }, { id: 3, name: "js-extra" }]
+```
+
 ## sortAsc(array)
 
 This function sorts an array of number or string in ascending order. The strings
