@@ -1,10 +1,13 @@
 {
   "name": "js-extra",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Does what native Javascript doesn't.",
   "homepage": "https://js-extra.netlify.com/",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/alexandre-lelain/js-extra"

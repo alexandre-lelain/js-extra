@@ -1,3 +1,9 @@
+# 1.0.6
+
+## fixes
+
+* Added `files` property to package.json to scope the dep's files. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.0.5
 
 ## features
