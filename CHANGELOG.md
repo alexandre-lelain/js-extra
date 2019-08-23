@@ -1,3 +1,9 @@
+# 1.0.7-rc
+
+## fixes
+
+* `count` can now use the predicate function on all types of items. ([@romainjudic](https://github.com/romainjudic))
+
 # 1.0.6
 
 ## fixes

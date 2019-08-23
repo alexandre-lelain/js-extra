@@ -4,7 +4,7 @@
 
 This function returns the number of occurrences of *toCount* in the *array* provided.
 You can either use this function to count the number of occurrences of a simple-typed value (number, string or boolean),
-or also use a predicate function if you want to count some complex-typed objects based on your own logic.
+or also use a predicate function if you want to input specific rules to count your items.
 
 ### Arguments
 
@@ -24,8 +24,10 @@ count([4, 2, 3, 4], 42);
 // => 0
 count(["js-extra", "rocks", "hello", "js-extra", "js-extra"], "js-extra");
 // => 3
-count([{ id: 1, name: "js" }, { id: 2, name: "extra" }, { id: 3, name: "js" }], (item) => item.name === "js");
+count([{ id: 1, name: "js" }, { id: 2, name: "extra" }, { id: 3, name: "js" }], item => item.name === "js");
 // => 2
+count([1, 2, 3, 4, 5], item => item > 2);
+// => 3
 ```
 
 ## isAlpha(value)
