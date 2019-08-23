@@ -5,12 +5,11 @@
 
 const count = (
   array: Array<number | string | boolean | object>,
-  toCount: number | string | boolean | ((item: object) => boolean),
+  toCount: number | string | boolean | ((item: number | string | boolean | object) => boolean),
 ): number | null => {
   try {
-    if (isArrayContainingSomeObjects(array) && toCount instanceof Function) {
-      const arrayOfObject = array as object[];
-      return countByPredicate(arrayOfObject, toCount);
+    if (toCount instanceof Function) {
+      return countByPredicate(array, toCount);
     }
 
     const arrayOfBasicType = array as Array<number | string | boolean>;
@@ -26,22 +25,24 @@ const count = (
   }
 };
 
-const countByPredicate = (array: object[], toCount: (item: object) => boolean): number | null => {
-  return array.reduce((itemCounts: number, item: object) => (itemCounts += toCount(item) ? 1 : 0), 0);
-};
-
-const countElement = (
-  array: Array<number | string | boolean>,
-  itemToCount: number | string | boolean,
+const countByPredicate = (
+  array: Array<number | string | boolean | object>,
+  toCount: (item: number | string | boolean | object) => boolean,
 ): number | null => {
   return array.reduce(
-    (itemCounts: number, item: number | string | boolean) => (itemCounts += item === itemToCount ? 1 : 0),
+    (itemCounts: number, item: number | string | boolean | object) => (itemCounts += toCount(item) ? 1 : 0),
     0,
   );
 };
 
-const isArrayContainingSomeObjects = (array: Array<number | string | boolean | object>): boolean => {
-  return Array.isArray(array) && array.length > 0 && array.some(item => typeof item === 'object');
+const countElement = (
+  array: Array<number | string | boolean | object>,
+  itemToCount: number | string | boolean,
+): number | null => {
+  return array.reduce(
+    (itemCounts: number, item: number | string | boolean | object) => (itemCounts += item === itemToCount ? 1 : 0),
+    0,
+  );
 };
 
 export default count;

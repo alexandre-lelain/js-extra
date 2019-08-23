@@ -18,6 +18,10 @@ test('count(NUMBER_ARRAY, (item) => item.name === "js") to equal 0', () => {
   expect(count(NUMBER_ARRAY, item => item.name === 'js')).toBe(0);
 });
 
+test('count(NUMBER_ARRAY, (item) => item > 2) to equal 6', () => {
+  expect(count(NUMBER_ARRAY, item => item > 2)).toBe(6);
+});
+
 // Array<string> tests
 test('count(STRING_ARRAY, "hello") to equal 2', () => {
   expect(count(STRING_ARRAY, 'hello')).toBe(2);
@@ -33,6 +37,10 @@ test('count(STRING_ARRAY, "world") to equal 3', () => {
 
 test('count(STRING_ARRAY, (item) => item.name === "js") to equal 0', () => {
   expect(count(STRING_ARRAY, item => item.name === 'js')).toBe(0);
+});
+
+test("count(STRING_ARRAY, (item) => item.indexOf('rocks') !== -1) to equal 2", () => {
+  expect(count(STRING_ARRAY, item => item.indexOf('rocks') !== -1)).toBe(2);
 });
 
 // Array<boolean> tests
