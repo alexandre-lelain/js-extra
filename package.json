@@ -1,6 +1,6 @@
 {
   "name": "js-extra",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Does what native Javascript doesn't.",
   "homepage": "https://js-extra.netlify.com/",
   "main": "lib/index.js",
@@ -40,12 +40,19 @@
   "devDependencies": {
     "@types/jest": "^24.0.15",
     "docsify-cli": "^4.3.0",
+    "husky": "^3.0.4",
     "jest": "^24.8.0",
     "marked": "^0.6.1",
     "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
     "ts-jest": "^24.0.2",
     "tslint": "^5.18.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.5.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged --pattern \"src/**/*.ts\" \"src/**/*.js\""
+    }
   }
 }
