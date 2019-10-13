@@ -1,5 +1,5 @@
 import sortDesc from '../';
-import { 
+import {
   NUMBER_ARRAY,
   NUMBER_ARRAY_TO_COMPACT,
   STRING_ARRAY,

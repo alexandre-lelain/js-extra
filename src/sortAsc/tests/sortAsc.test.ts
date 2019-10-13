@@ -1,5 +1,5 @@
 import sortAsc from '../';
-import { 
+import {
   NUMBER_ARRAY,
   NUMBER_ARRAY_TO_COMPACT,
   STRING_ARRAY,
@@ -27,4 +27,3 @@ test('sortAsc(42) should throw an error', () => {
 test('sortAsc(NUMBER_ARRAY_TO_COMPACT, { compact: true }) should sort the array in acending order and remove falsy values except 0', () => {
   expect(sortAsc(NUMBER_ARRAY_TO_COMPACT, { compact: true })).toStrictEqual(SORTED_NUMBER_ARRAY_COMPACTED);
 });
-
