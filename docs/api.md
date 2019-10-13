@@ -117,7 +117,7 @@ redesign(array, { filter: item => item.name === "js", transform: item => ({ ...i
 // => [{ id: 1, name: "js-extra" }, { id: 3, name: "js-extra" }]
 ```
 
-## sortAsc(array)
+## sortAsc(array, [options={}])
 
 This function sorts an array of number or string in ascending order. The strings
 are compared using [localeCompare()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/localeCompare) function.
@@ -125,6 +125,8 @@ are compared using [localeCompare()](https://developer.mozilla.org/fr/docs/Web/J
 ### Arguments
 
 - **array *(Array<number | string>)***: the array to process.
+- **[options={}] *(Object)***: the options object.
+- **[options.compact=false] *(boolean)***: the options object.
 
 ### returns
 
@@ -137,9 +139,11 @@ sortAsc([4, 2, 3, 5, 4]);
 // => [2, 3, 4, 4, 5]
 sortAsc(["a", "z", "e", "c", "h"]);
 // => ["a", "c", "e", "h", "z"]
+sortAsc([4, 0, 2, null, 5, undefined, 4], { compact: true });
+// => [0, 2, 4, 4, 5]
 ```
 
-## sortDesc(array)
+## sortDesc(array, [options={}])
 
 This function sorts an array of number or string in descending order. The strings
 are compared using [localeCompare()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/localeCompare) function.
@@ -147,6 +151,8 @@ are compared using [localeCompare()](https://developer.mozilla.org/fr/docs/Web/J
 ### Arguments
 
 - **array *(Array<number | string>)***: the array to process.
+- **[options={}] *(Object)***: the options object.
+- **[options.compact=false] *(boolean)***: the options object.
 
 ### returns
 
@@ -159,4 +165,6 @@ sortDesc([4, 2, 3, 5, 4]);
 // => [5, 4, 4, 3, 2]
 sortDesc(["a", "z", "e", "c", "h"]);
 // => [ "z", "h", "e", "c", "a" ]
+sortDesc([4, 0, 2, null, 5, undefined, 4], { compact: true });
+// => [5, 4, 4, 2, 0]
 ```
