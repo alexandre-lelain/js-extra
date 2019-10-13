@@ -1,3 +1,10 @@
+# 1.0.8
+
+## features
+
+* Added Menu & Api sections to README. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+* Added `compact` option to `sortAsc` & `sortDesc` functions. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.0.7
 
 ## fixes

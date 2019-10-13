@@ -6,6 +6,13 @@ Does what native Javascript doesn't.
 
 [js-extra docs](https://js-extra.netlify.com/)
 
+## Menu
+
+- [Motivation](#Motivation)
+- [How to use js-extra](#How-to-use-js-extra)
+- [API](#Api)
+- [Contributing](#Contributing)
+
 ## Motivation
 
 From my humble point of view, **Javascript** is lacking of some very useful small built-in functions some other languages, like Python, have.
@@ -51,6 +58,10 @@ var count = require('js-extra').count
 ```
 
 You can find all the implemented & available functions of the lib [here](https://js-extra.netlify.com/)
+
+## API
+
+The API is available here: js-extra.netlify.com
 
 ## Contributing
 
