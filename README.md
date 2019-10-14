@@ -8,10 +8,10 @@ Does what native Javascript doesn't.
 
 ## Menu
 
-- [Motivation](#Motivation)
-- [How to use js-extra](#How-to-use-js-extra)
-- [API](#Api)
-- [Contributing](#Contributing)
+- [Motivation](#motivation)
+- [How to use js-extra](#how-to-use-js-extra)
+- [API](#api)
+- [Contributing](#contributing)
 
 ## Motivation
 
@@ -57,11 +57,11 @@ ES5
 var count = require('js-extra').count
 ```
 
-You can find all the implemented & available functions of the lib [here](https://js-extra.netlify.com/)
+You can find all the implemented & available functions of the lib [here](https://js-extra.netlify.com/#/api)
 
 ## API
 
-The API is available here: js-extra.netlify.com
+The API is available here: [js-extra API](https://js-extra.netlify.com/#/api)
 
 ## Contributing
 
