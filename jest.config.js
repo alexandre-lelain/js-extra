@@ -11,5 +11,8 @@ module.exports = {
     'ts-jest': {
       diagnostics: false
     }
+  },
+  moduleNameMapper: {
+    "^utils$": "<rootDir>/utils/",
   }
 };

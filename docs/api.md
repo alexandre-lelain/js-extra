@@ -1,5 +1,31 @@
 # API
 
+## compact(array, withZero)
+
+This function compacts the values of the given *array*, meaning all falsey values EXCEPT number 0 are removed from it by default.
+Falsey values can be **null**, **''**, **undefined**, **false** and **NaN**. If you also want **0** to be removed, you can
+set the 2nd parameter *withZero* to **true**.
+
+### Arguments
+
+- **array *(Array<any>)***: the array to process.
+- **withZero *(boolean)***: set to true to also remove the number 0 from the array.
+
+### returns
+
+- ***(Array<any>)***: the compacted array.
+
+### Examples
+
+```js
+compact([4, null, 3, 4, 0]);
+// => [4, 3, 4, 0]
+compact([4, null, 3, 4, 0], true);
+// => [4, 3, 4]
+compact([4, null, undefined, 3, '', 4, 0]);
+// => [4, 3, 4, 0]
+```
+
 ## count(array, toCount)
 
 This function returns the number of occurrences of *toCount* in the *array* provided.
