@@ -1,3 +1,10 @@
+# 1.1.0
+
+## Features
+
+* Add `compact` function. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+* Add `prettyTestName` function for unit test formatting. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.0.9
 
 ## fixes
