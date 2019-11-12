@@ -1,3 +1,4 @@
+import compactArray from '../compact';
 /**
  * This function sorts an array of number or string in descending order.
  */
@@ -20,8 +21,5 @@ const sortDesc = (
     throw e;
   }
 };
-
-const compactArray = (array: Array<number | string> = []) =>
-  array.filter((item: number | string) => item === 0 || !!item);
 
 export default sortDesc;

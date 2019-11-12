@@ -4,6 +4,9 @@
 
 * Add `compact` function. ([@alexandre-lelain](https://github.com/alexandre-lelain))
 * Add `prettyTestName` function for unit test formatting. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+* Add `sortCompact` function. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+* Add sections *Array* and *String* in docs and fixed typos. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+* All functions compacting an array are now using the new `compact` function. ([@alexandre-lelain](https://github.com/alexandre-lelain))
 
 # 1.0.9
 

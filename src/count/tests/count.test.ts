@@ -77,7 +77,7 @@ test('count(OBJECT_ARRAY, () => true to equal OBJECT_ARRAY.length', () => {
   expect(count(OBJECT_ARRAY, () => true)).toBe(OBJECT_ARRAY.length);
 });
 
-// Array<any>
+// any[]
 test('count(RANDOM_TYPED_ARRAY, (item) => item.name === "js" to equal 2', () => {
   expect(count(RANDOM_TYPED_ARRAY, item => item.name === 'js')).toBe(2);
 });
