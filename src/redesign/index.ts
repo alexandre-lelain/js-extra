@@ -1,3 +1,4 @@
+import compactArray from '../compact';
 /**
  * redesign is a function that allows you to do shape & cut a given array.
  * You can give it a `filter` predicate function to filter the elements of your array.
@@ -23,8 +24,5 @@ const redesign = (
   const compactedArray = compact ? compactArray(transformedArray) : transformedArray;
   return compactedArray;
 };
-
-const compactArray = (array: Array<number | string | boolean | object> = []) =>
-  array.filter((item: number | string | boolean | object) => !!item);
 
 export default redesign;

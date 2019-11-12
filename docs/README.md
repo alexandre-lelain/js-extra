@@ -80,5 +80,5 @@ yarn test
 
 Before you commit:
 ```shell
-yarn lint && yarn prettier
+yarn validate
 ```
