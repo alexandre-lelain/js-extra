@@ -7,6 +7,7 @@ import {
   FALSEY_NUMBER_ARRAY_SORTED,
   FALSEY_NUMBER_ARRAY_SORTED_DEFAULT,
   FALSEY_NUMBER_ARRAY_SORTED_WITHOUT_ZERO,
+  FALSEY_NUMBER_ARRAY_SORTED_WITHOUT_ZERO_DEFAULT,
   NO_FALSEY_NUMBER_ARRAY_SORTED,
   sortByDescendingOrder,
 } from './mocks';
@@ -16,13 +17,22 @@ describe('sortCompact unit testing', () => {
     expect(() => sortCompact({}, () => {})).toThrow();
   });
 
-  test('sortCompact([], "js-extra") throws an error on the function type.', () => {
-    expect(() => sortCompact([], null)).toThrow();
-  });
-
   test(prettyTestName('sortCompact(%s) should return %s', FALSEY_ARRAY, FALSEY_NUMBER_ARRAY_SORTED_DEFAULT), () => {
     expect(sortCompact(FALSEY_ARRAY)).toStrictEqual(FALSEY_NUMBER_ARRAY_SORTED_DEFAULT);
   });
+
+  test(
+    prettyTestName(
+      'sortCompact(%s, { withZero: true }) should return %s',
+      FALSEY_ARRAY,
+      FALSEY_NUMBER_ARRAY_SORTED_WITHOUT_ZERO_DEFAULT,
+    ),
+    () => {
+      expect(sortCompact(FALSEY_ARRAY, { withZero: true })).toStrictEqual(
+        FALSEY_NUMBER_ARRAY_SORTED_WITHOUT_ZERO_DEFAULT,
+      );
+    },
+  );
 
   test(
     prettyTestName(

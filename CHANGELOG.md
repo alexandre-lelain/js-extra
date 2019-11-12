@@ -1,3 +1,9 @@
+# 1.1.1
+
+## Fixes
+
+* Fix optional `sortFunction` not working in `sortCompact` unit. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.1.0
 
 ## Features

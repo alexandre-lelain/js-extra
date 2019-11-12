@@ -10,4 +10,6 @@ export const FALSEY_NUMBER_ARRAY_SORTED_DEFAULT = [0, 1, 4, 5, 6, 7, 9];
 
 export const FALSEY_NUMBER_ARRAY_SORTED_WITHOUT_ZERO = [9, 7, 6, 5, 4, 1];
 
+export const FALSEY_NUMBER_ARRAY_SORTED_WITHOUT_ZERO_DEFAULT = [1, 4, 5, 6, 7, 9];
+
 export const sortByDescendingOrder = (a, b) => b - a;
