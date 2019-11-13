@@ -1,3 +1,9 @@
+# 1.1.2
+
+## Features
+
+* Optimize `sortCompact` code. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.1.1
 
 ## Fixes
