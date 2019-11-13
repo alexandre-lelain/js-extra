@@ -1,10 +1,26 @@
-# js-extra
+<div align="center" class="header">
 
-[![npm version](https://img.shields.io/npm/v/js-extra.svg?style=flat)](https://www.npmjs.com/package/js-extra) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/alexandre-lelain/js-extra/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/alexandre-lelain/js-extra/pulls)
+<h1>js-extra</h1>
+<br/>
 
-Does what native Javascript doesn't.
+[![npm version](https://img.shields.io/npm/v/js-extra.svg?style=flat)](https://www.npmjs.com/package/js-extra)
+[![ci status](https://travis-ci.org/alexandre-lelain/js-extra.svg?branch=master)](https://travis-ci.org/alexandre-lelain/js-extra)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/alexandre-lelain/js-extra/blob/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/alexandre-lelain/js-extra/pulls)
 
-<a id="apiLink" href="#/api">API</a>
+<h4>Does what native Javascript doesn't.</h4>
+
+<a class="navBtn" href="#/?id=how-to-use-js-extra">Get started</a>
+<a class="navBtn" href="#/api">API</a>
+
+</div>
+
+## Menu
+
+- [Motivation](#motivation)
+- [How to use js-extra](#how-to-use-js-extra)
+- [API](#api)
+- [Contributing](#contributing)
 
 ## Motivation
 
@@ -50,7 +66,11 @@ ES5
 var count = require('js-extra').count
 ```
 
-You can find all the implemented & available functions of the lib [here](/api)
+You can find all the implemented & available functions of the lib [here](https://js-extra.netlify.com/#/api)
+
+## API
+
+The API is available here: [js-extra API](https://js-extra.netlify.com/#/api)
 
 ## Contributing
 
@@ -62,8 +82,9 @@ go ahead and open a PR! :)
 
 Found any bugs or you have some ideas ? Please, open an issue! :)
 
-### Installation
+**The following commands are executed with [yarn](https://yarnpkg.com/lang/en/), but you can of course use any package manager tool like npm or npx.**
 
+To install dependencies:
 ```shell
 yarn install
 ```

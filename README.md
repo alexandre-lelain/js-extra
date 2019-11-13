@@ -1,12 +1,14 @@
 <div align="center">
 
 <h1>js-extra</h1>
+<br/>
 
 [![npm version](https://img.shields.io/npm/v/js-extra.svg?style=flat)](https://www.npmjs.com/package/js-extra)
 [![ci status](https://travis-ci.org/alexandre-lelain/js-extra.svg?branch=master)](https://travis-ci.org/alexandre-lelain/js-extra)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/alexandre-lelain/js-extra/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/alexandre-lelain/js-extra/pulls)
 
+<br/>
 <p>Does what native Javascript doesn't.</p>
 
 **[js-extra docs](https://js-extra.netlify.com/)**
@@ -80,7 +82,9 @@ go ahead and open a PR! :)
 
 Found any bugs or you have some ideas ? Please, open an issue! :)
 
-### Installation
+**The following commands are executed with [yarn](https://yarnpkg.com/lang/en/), but you can of course use any package manager tool like npm or npx.**
+
+To install dependencies:
 
 ```shell
 yarn install

@@ -3,6 +3,7 @@
 ## Features
 
 * Optimize `sortCompact` code. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+* Updated docs README. ([@alexandre-lelain](https://github.com/alexandre-lelain))
 
 # 1.1.1
 
