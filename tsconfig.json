@@ -3,7 +3,8 @@
     "target": "es6",
     "moduleResolution": "node",
     "declaration": true,
-    "strict": true
+    "strict": true,
+    "esModuleInterop": true
   },
   "include": ["src/index.ts"],
   "exclude": ["node_modules", "**/tests/*"]
