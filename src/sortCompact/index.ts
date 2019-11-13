@@ -16,12 +16,11 @@ const sortCompact = (
   sortFunction?: ((left: any, right: any) => number) | (IOptions),
   options: IOptions = {},
 ): any[] => {
-  const { before = true, withZero = false } = options;
   try {
     if (sortFunction && typeof sortFunction !== 'function') {
-      return sortCompactGeneric(array, undefined, sortFunction.before, sortFunction.withZero);
+      return sortCompactGeneric(array, undefined, sortFunction);
     }
-    return sortCompactGeneric(array, typeof sortFunction === 'function' ? sortFunction : undefined, before, withZero);
+    return sortCompactGeneric(array, typeof sortFunction === 'function' ? sortFunction : undefined, options);
   } catch (e) {
     if (!Array.isArray(array)) {
       throw new Error(`The first argument of js-extra.sortCompact() must be of type array. ${array} given. ${e}`);
@@ -33,9 +32,9 @@ const sortCompact = (
 const sortCompactGeneric = (
   array: any[],
   sortFunction?: (left: any, right: any) => number,
-  before: boolean = true,
-  withZero: boolean = false,
+  options: IOptions = {},
 ): any[] => {
+  const { before = true, withZero = false } = options;
   if (before) {
     const compactedArray = compact(array, withZero);
     return compactedArray.sort(sortFunction);
