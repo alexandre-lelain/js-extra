@@ -7,6 +7,8 @@
 [![ci status](https://travis-ci.org/alexandre-lelain/js-extra.svg?branch=master)](https://travis-ci.org/alexandre-lelain/js-extra)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/alexandre-lelain/js-extra/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/alexandre-lelain/js-extra/pulls)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![build formats](https://img.shields.io/badge/module%20formats-cjs%2C%20esm-green.svg)](https://github.com/alexandre-lelain/components-extra)
 
 <br/>
 <p>Does what native Javascript doesn't.</p>
@@ -66,7 +68,9 @@ ES5
 var count = require('js-extra').count
 ```
 
-You can find all the implemented & available functions of the lib [here](https://js-extra.netlify.com/#/api)
+You can find all the implemented & available functions of the lib [here](https://js-extra.netlify.com/#/api).
+
+**js-extra** is **tree-shakeable** and **side-effects free**!
 
 ## API
 

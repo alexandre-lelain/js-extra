@@ -1,3 +1,9 @@
+# 1.2.0
+
+## Features
+
+* **js-extra** is now tree-shakeable! ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.1.2
 
 ## Features
