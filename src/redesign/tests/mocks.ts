@@ -22,6 +22,9 @@ export const OBJECT_ARRAY = [
 
 export const REDESIGNED_ARRAY = [{ name: 'js-extra' }, { name: 'js-extra' }];
 
-export const REDESIGNED_ARRAY_WITH_IDS = [{ id: 1, name: 'js-extra' }, { id: 4, name: 'js-extra' }];
+export const REDESIGNED_ARRAY_WITH_IDS = [
+  { id: 1, name: 'js-extra' },
+  { id: 4, name: 'js-extra' },
+];
 
 export const RANDOM_TYPED_ARRAY = [{ id: 1, name: 'js' }, 'TS', { id: 2, name: 'js' }];

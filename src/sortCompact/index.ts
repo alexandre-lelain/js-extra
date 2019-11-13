@@ -13,7 +13,7 @@ interface IOptions {
 
 const sortCompact = (
   array: any[],
-  sortFunction?: ((left: any, right: any) => number) | (IOptions),
+  sortFunction?: ((left: any, right: any) => number) | IOptions,
   options: IOptions = {},
 ): any[] => {
   try {

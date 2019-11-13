@@ -13,7 +13,7 @@ const count = (
     }
 
     const arrayOfBasicType = array as Array<number | string | boolean>;
-    const itemToCount = toCount as (number | string | boolean);
+    const itemToCount = toCount as number | string | boolean;
     return countElement(arrayOfBasicType, itemToCount);
   } catch (e) {
     if (!Array.isArray(array)) {
