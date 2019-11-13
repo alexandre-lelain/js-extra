@@ -1,10 +1,17 @@
-# js-extra
+<div align="center">
 
-[![npm version](https://img.shields.io/npm/v/js-extra.svg?style=flat)](https://www.npmjs.com/package/js-extra) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/alexandre-lelain/js-extra/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/alexandre-lelain/js-extra/pulls)
+<h1>js-extra</h1>
 
-Does what native Javascript doesn't.
+[![npm version](https://img.shields.io/npm/v/js-extra.svg?style=flat)](https://www.npmjs.com/package/js-extra)
+[![ci status](https://travis-ci.org/alexandre-lelain/js-extra.svg?branch=master)](https://travis-ci.org/alexandre-lelain/js-extra)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/alexandre-lelain/js-extra/blob/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/alexandre-lelain/js-extra/pulls)
 
-[js-extra docs](https://js-extra.netlify.com/)
+<p>Does what native Javascript doesn't.</p>
+
+**[js-extra docs](https://js-extra.netlify.com/)**
+
+</div>
 
 ## Menu
 
