@@ -13,3 +13,12 @@
 .navBtn:not(:last-of-type) {
   margin-right: 12px;
 }
+
+#api-content h3 {
+  background-color: lightblue;
+  padding: 16px;
+}
+
+#api-content h3:not(:first-of-type) {
+  margin-top: 64px;
+}

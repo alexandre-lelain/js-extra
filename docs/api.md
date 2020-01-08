@@ -1,3 +1,5 @@
+<div id="api-content">
+
 # **API**
 
 ## **Array**
@@ -41,7 +43,7 @@ or also use a predicate function if you want to input specific rules to count yo
 
 #### returns
 
-- ***(number)***: the number of occurrences of item in array or the number of items satisfying the predicate condition.
+- ***(number)***: the number of occurrences of **toCount** in **array** or the number of items satisfying the predicate condition.
 
 #### Examples
 
@@ -229,3 +231,5 @@ isDigit("jsextrarocks42");
 isDigit("");
 // => false
 ```
+
+</div>
