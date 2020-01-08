@@ -1,3 +1,14 @@
+# 1.2.1
+
+## Docs
+
+* Improve API header display. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
+## Chores
+
+* Update dependencies - no breaking-change. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+* Removed useless dep `marked`. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.2.0
 
 ## Features
