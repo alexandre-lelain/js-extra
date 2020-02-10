@@ -3,17 +3,21 @@
  * itemToCount in the array provided.
  */
 
+type CountType = number | null;
+type CountArrayType = (number | string | boolean | object)[];
+type ItemToCountType = number | string | boolean;
+
 const count = (
-  array: Array<number | string | boolean | object>,
-  toCount: number | string | boolean | ((item: number | string | boolean | object) => boolean),
-): number | null => {
+  array: CountArrayType,
+  toCount: ItemToCountType | ((item: ItemToCountType | object) => boolean),
+): CountType => {
   try {
     if (toCount instanceof Function) {
       return countByPredicate(array, toCount);
     }
 
-    const arrayOfBasicType = array as Array<number | string | boolean>;
-    const itemToCount = toCount as number | string | boolean;
+    const arrayOfBasicType = array as ItemToCountType[];
+    const itemToCount = toCount as ItemToCountType;
     return countElement(arrayOfBasicType, itemToCount);
   } catch (e) {
     if (!Array.isArray(array)) {
@@ -25,22 +29,13 @@ const count = (
   }
 };
 
-const countByPredicate = (
-  array: Array<number | string | boolean | object>,
-  toCount: (item: number | string | boolean | object) => boolean,
-): number | null => {
-  return array.reduce(
-    (itemCounts: number, item: number | string | boolean | object) => (itemCounts += toCount(item) ? 1 : 0),
-    0,
-  );
+const countByPredicate = (array: CountArrayType, toCount: (item: ItemToCountType | object) => boolean): CountType => {
+  return array.reduce((itemCounts: number, item: ItemToCountType | object) => (itemCounts += toCount(item) ? 1 : 0), 0);
 };
 
-const countElement = (
-  array: Array<number | string | boolean | object>,
-  itemToCount: number | string | boolean,
-): number | null => {
+const countElement = (array: CountArrayType, itemToCount: ItemToCountType): CountType => {
   return array.reduce(
-    (itemCounts: number, item: number | string | boolean | object) => (itemCounts += item === itemToCount ? 1 : 0),
+    (itemCounts: number, item: ItemToCountType | object) => (itemCounts += item === itemToCount ? 1 : 0),
     0,
   );
 };

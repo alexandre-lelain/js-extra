@@ -2,10 +2,13 @@ import compactArray from '../compact';
 /**
  * This function sorts an array of number or string in ascending order.
  */
+
+type ArrayToSortType = (number | string)[];
+
 const sortAsc = (
-  array: Array<number | string> = [],
+  array: ArrayToSortType = [],
   { compact = false }: { compact?: boolean } = {},
-): Array<number | string> | null => {
+): ArrayToSortType | null => {
   try {
     const sortedArray = array.sort((a: any, b: any) => {
       if (typeof a === 'string' && typeof b === 'string') {

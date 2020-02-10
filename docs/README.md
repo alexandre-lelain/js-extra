@@ -45,6 +45,12 @@ built on top of the native Javascript functions. Since [Lodash](https://lodash.c
 already provides many extra functions, the lib will aim to complete it with very
 specific functions.
 
+With **js-extra** the above code becomes:
+
+```js
+count(array, itemToCount)
+```
+
 ## How to use js-extra
 
 Yarn:

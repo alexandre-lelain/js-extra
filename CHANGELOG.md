@@ -1,3 +1,13 @@
+# 1.2.2
+
+## Docs
+
+* Updated README. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
+## Refactor
+
+* Use `types` when possible to avoid duplication. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.2.1
 
 ## Docs

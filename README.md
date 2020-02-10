@@ -30,7 +30,7 @@ From my humble point of view, **Javascript** is lacking of some very useful smal
 
 Yes, [**reduce**](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/reduce) and [**map**](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/map) can do quite a lot of things, in quite a lot of situations. They can also often save us in the most desparate situations. But because they are very generic tools, they do not provide a clear straight-forward understanding of what they are used/implemented for.
 
-For example, let's say you want to count the occurences of a number in an array of numbers. For sure, you can do it with a reduce:
+For example, let's say you want to **count** the occurences of a number in an array of numbers. For sure, you can do it with a **reduce**:
 
 ```js
 array.reduce((count, item) => item === itemToCount ? count + 1 : count, 0)
@@ -43,6 +43,12 @@ This is exactly what **js-extra** is built for. Its aim is to provide explicit f
 built on top of the native Javascript functions. Since [Lodash](https://lodash.com/)
 already provides many extra functions, the lib will aim to complete it with very
 specific functions.
+
+With **js-extra** the above code becomes:
+
+```js
+count(array, itemToCount)
+```
 
 ## How to use js-extra
 
