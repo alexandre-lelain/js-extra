@@ -1,3 +1,9 @@
+# 1.2.3
+
+## Chores
+
+* Bump dependencies to latest versions. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.2.2
 
 ## Docs
