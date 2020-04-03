@@ -8,7 +8,8 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/alexandre-lelain/js-extra/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/alexandre-lelain/js-extra/pulls)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![build formats](https://img.shields.io/badge/module%20formats-cjs%2C%20esm-green.svg)](https://github.com/alexandre-lelain/components-extra)
+[![build formats](https://img.shields.io/badge/module%20formats-cjs%2C%20esm-green.svg)](https://github.com/alexandre-lelain/js-extra)
+[![bundle size](https://badgen.net/bundlephobia/min/js-extra@latest)](https://bundlephobia.com/result?p=js-extra@latest)
 
 <br/>
 <p>Does what native Javascript doesn't.</p>

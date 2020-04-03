@@ -41,15 +41,15 @@
     "version": "yarn prettier && git add -vA src"
   },
   "devDependencies": {
-    "@types/jest": "^25.1.4",
+    "@types/jest": "^25.1.5",
     "docsify-cli": "^4.4.0",
     "husky": "^4.2.3",
-    "jest": "^25.1.0",
-    "marked": "^0.8.0",
-    "prettier": "^1.19.1",
+    "jest": "^25.2.6",
+    "marked": "^0.8.2",
+    "prettier": "^2.0.2",
     "pretty-quick": "^2.0.1",
-    "ts-jest": "^25.2.1",
-    "tslint": "^6.1.0",
+    "ts-jest": "^25.3.0",
+    "tslint": "^6.1.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.8.3"
   },
