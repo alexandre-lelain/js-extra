@@ -62,7 +62,7 @@ count([1, 2, 3, 4, 5], item => item > 2);
 
 ### redesign(array, [options={}])
 
-redesign is a function that allows you to shape & cut a given **array**. You can
+Redesign is a function that allows you to shape & cut a given **array**. You can
 give it a `filter` predicate function to filter the elements of your array.
 You can also give it a `transform` function to transform the elements of your array.
 And you can also chose to make the redesign `compact`, thus removing any falsey
@@ -97,6 +97,39 @@ redesign([42, 'js', null, 'extra', undefined, false], { transform: n => n + 42, 
 const array = [{ id: 1, name: "js" }, { id: 2, name: "extra" }, { id: 3, name: "js" }]
 redesign(array, { filter: item => item.name === "js", transform: item => ({ ...item, name: item.name + '-extra' }) });
 // => [{ id: 1, name: "js-extra" }, { id: 3, name: "js-extra" }]
+```
+
+### slugify(text, [withHash=false])
+
+Slugifies a text to make it a valid url hash. Can be pretty useful when you are compiling
+markdown code to HTML and want to make your titles become anchors, with a valid
+and standard url hash.
+
+For example, if you have a title `"The best number: 42"`, **slugify** will transform it
+into `"the-best-number-42"`.
+
+It will return an **empty string** if you provide it with a *falsy* text.
+
+#### Arguments
+
+- **text *(string)***: the string to process.
+- **[withHash = false] *(boolean)***: Pass `true` if you want to prefix the slug with `#`.
+
+#### returns
+
+- ***(string)***: returns the slug.
+
+#### Examples
+
+```js
+slugify();
+// => ""
+slugify("hello.world")
+// => "hello-world"
+slugify("Hello, World ?")
+// => "hello-world"
+slugify("$Hello? World$ ,Space", true)
+// => "#hello-world-space"
 ```
 
 ### sortAsc(array, [options={}])

@@ -6,6 +6,6 @@
     "strict": true,
     "esModuleInterop": true
   },
-  "include": ["src/index.ts"],
+  "include": ["src"],
   "exclude": ["node_modules", "**/tests/*"]
 }

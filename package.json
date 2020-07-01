@@ -6,6 +6,7 @@
   "module": "lib/esm/index.js",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
   "sideEffects": false,
   "files": [
     "lib/**/*"
@@ -30,7 +31,7 @@
     "build": "yarn build:esm && yarn build:cjs",
     "build:esm": "tsc -m es6 --outDir lib/esm",
     "build:cjs": "tsc -m commonjs --outDir lib",
-    "doc": "yarn docsify serve docs",
+    "docs": "yarn docsify serve docs",
     "lint": "tslint -p tsconfig.json",
     "prettier": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "validate": "yarn lint && yarn test && yarn build",
@@ -41,17 +42,17 @@
     "version": "yarn prettier && git add -vA src"
   },
   "devDependencies": {
-    "@types/jest": "^25.1.5",
-    "docsify-cli": "^4.4.0",
-    "husky": "^4.2.3",
-    "jest": "^25.2.6",
-    "marked": "^0.8.2",
-    "prettier": "^2.0.2",
+    "@types/jest": "^26.0.3",
+    "docsify-cli": "^4.4.1",
+    "husky": "^4.2.5",
+    "jest": "^26.1.0",
+    "marked": "^1.1.0",
+    "prettier": "^2.0.5",
     "pretty-quick": "^2.0.1",
-    "ts-jest": "^25.3.0",
-    "tslint": "^6.1.1",
+    "ts-jest": "^26.1.1",
+    "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.5"
   },
   "husky": {
     "hooks": {

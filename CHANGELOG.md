@@ -1,3 +1,19 @@
+# 1.3.0
+
+## Featues
+
+* Add `slugify` function. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+* Add `typings` field to package.json. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+* All types are now exported. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
+## Fixes
+
+* Fix functions description for jsDoc standard. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
+## Chores
+
+* Bump dependencies to latest versions. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.2.3
 
 ## Chores
