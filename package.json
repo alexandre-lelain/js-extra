@@ -33,7 +33,7 @@
     "build:cjs": "tsc -m commonjs --outDir lib",
     "docs": "yarn docsify serve docs",
     "lint": "tslint -p tsconfig.json",
-    "prettier": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "prettier": "prettier --write \"src/**/*.ts\"",
     "validate": "yarn lint && yarn test && yarn build",
     "prepublishOnly": "yarn validate",
     "preversion": "yarn validate",
