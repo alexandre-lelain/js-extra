@@ -1,3 +1,7 @@
+# 1.4.0
+
+* Add `isSSR` function. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.3.0
 
 ## Featues

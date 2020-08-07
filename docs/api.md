@@ -265,4 +265,31 @@ isDigit("");
 // => false
 ```
 
+## **Utils**
+
+### isSSR()
+
+Returns *true* if you're compiling JS code into HTML code or running JS code on a server.
+*false* else.
+
+This function will come handy when you're working with server-side-rendering front-ends.
+
+#### Arguments
+
+No arguments.
+
+#### returns
+
+- ***(boolean)***: returns *true* if the global **window** object is undefined, *false* else.
+
+#### Examples
+
+```js
+isSSR(); // if typeof window === "undefined".
+// => true
+isSSR(); // if you're running JS code in the browser (or any environment with the global window object defined).
+// => false
+```
+
+
 </div>
