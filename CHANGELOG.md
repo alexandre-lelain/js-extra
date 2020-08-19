@@ -1,3 +1,9 @@
+# 1.5.2
+
+## Docs
+
+* Fix obsolete links. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.5.1
 
 ## Docs

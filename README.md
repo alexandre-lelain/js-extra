@@ -1,14 +1,14 @@
 <div align="center">
 
-![js-extra](docs/img/js-extra.webp)
-
-<br/>
+<p align="center">
+  <a href="https://js-extra.netlify.app" rel="noopener" target="_blank"><img width="150" src="docs/img/js-extra.webp" alt="Js-extra logo"></a></p>
+</p>
 
 <h1>js-extra</h1>
 
 <p>Does what native Javascript doesn't.</p>
 
-**[js-extra docs](https://js-extra.netlify.com/)**
+**[js-extra docs](https://js-extra.netlify.app/)**
 
 <br/>
 

@@ -2,8 +2,6 @@
 
 ![js-extra](img/js-extra.webp)
 
-<br/>
-
 <h1>js-extra</h1>
 
 <h4>Does what native Javascript doesn't.</h4>
