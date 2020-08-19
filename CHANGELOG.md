@@ -1,4 +1,17 @@
+# 1.5.0
+
+## Features
+
+* Add `isHexColor` function. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+* Enforce stricter type-checking on runtime and throw errors if type mismatches. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
+## Docs
+
+* Add js-extra icon! :) ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.4.0
+
+## Features
 
 * Add `isSSR` function. ([@alexandre-lelain](https://github.com/alexandre-lelain))
 

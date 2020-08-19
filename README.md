@@ -11,6 +11,8 @@
 [![build formats](https://img.shields.io/badge/module%20formats-cjs%2C%20esm-green.svg)](https://github.com/alexandre-lelain/js-extra)
 [![bundle size](https://badgen.net/bundlephobia/min/js-extra@latest)](https://bundlephobia.com/result?p=js-extra@latest)
 
+![js-extra](docs/img/js-extra.webp)
+
 <br/>
 <p>Does what native Javascript doesn't.</p>
 

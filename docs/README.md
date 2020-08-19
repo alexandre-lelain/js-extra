@@ -9,7 +9,9 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/alexandre-lelain/js-extra/pulls)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![build formats](https://img.shields.io/badge/module%20formats-cjs%2C%20esm-green.svg)](https://github.com/alexandre-lelain/components-extra)
+[![bundle size](https://badgen.net/bundlephobia/min/js-extra@latest)](https://bundlephobia.com/result?p=js-extra@latest)
 
+![js-extra](img/js-extra.webp)
 
 <h4>Does what native Javascript doesn't.</h4>
 
@@ -81,7 +83,7 @@ You can find all the implemented & available functions of the lib [here](https:/
 
 ## API
 
-The API is available here: [js-extra API](https://js-extra.netlify.com/#/api)
+The API is available here: [js-extra API](/api?id=api)
 
 ## Contributing
 

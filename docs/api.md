@@ -265,7 +265,33 @@ isDigit("");
 // => false
 ```
 
-## **Utils**
+## **Browser**
+
+### isHexColor(value)
+
+This function returns *true* if the string provided is an [hex color](https://www.w3schools.com/colors/colors_hexadecimal.asp),
+*false* else. **Note:** The first `#` character of the string is not mandatory.
+
+#### Arguments
+
+- **value *(string)***: the string to process.
+
+#### returns
+
+- ***(boolean)***: returns *true* if **value** is an hex color, *false* else.
+
+#### Examples
+
+```js
+isHexColor("fff");
+// -> true
+isHexColor("#e4e4e4");
+// -> true
+isHexColor("#e4");
+// -> false
+isHexColor("#e123");
+// -> false
+```
 
 ### isSSR()
 
@@ -290,6 +316,7 @@ isSSR(); // if typeof window === "undefined".
 isSSR(); // if you're running JS code in the browser (or any environment with the global window object defined).
 // => false
 ```
+
 
 
 </div>
