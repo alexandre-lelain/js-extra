@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import isHexColor from '..'
 
 describe('isHexColor', () => {
