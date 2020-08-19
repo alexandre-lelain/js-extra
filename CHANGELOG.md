@@ -1,3 +1,9 @@
+# 1.5.1
+
+## Docs
+
+* Fix js-extra icon size and location. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.5.0
 
 ## Features
