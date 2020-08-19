@@ -6,9 +6,11 @@
  * in the result:  slugify("API of React.Component", true) == "#api-of-react-component"
  */
 const slugify = (text: string, withHash = false): string => {
-  if (!text) {
-    return ''
+  const textType = typeof text
+  if (textType !== 'string') {
+    throw new Error(`slugify() is expecting a string, but ${textType} was given.`)
   }
+
   const loweredText = text.toLowerCase()
   const filteredText = replaceWeirdChars(loweredText)
   const slug = trimText(filteredText)

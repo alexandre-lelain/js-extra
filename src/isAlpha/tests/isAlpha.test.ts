@@ -1,6 +1,10 @@
 import isAlpha from '..'
 
 describe('isAlpha', () => {
+  test('isAlpha(42) should throw an error', () => {
+    expect(() => isAlpha(42)).toThrowError()
+  })
+
   test('isAlpha("a") should return true', () => {
     expect(isAlpha('a')).toBe(true)
   })

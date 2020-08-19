@@ -1,6 +1,10 @@
 import isDigit from '..'
 
 describe('isDigit', () => {
+  test('isDigit([42]) should throw an error', () => {
+    expect(() => isDigit([42])).toThrowError()
+  })
+
   test('isDigit("0") should return true', () => {
     expect(isDigit('1')).toBe(true)
   })

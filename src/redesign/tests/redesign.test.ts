@@ -16,6 +16,10 @@ import {
 } from './mocks'
 
 describe('redesign', () => {
+  test('redesign("42") should throw an error', () => {
+    expect(() => redesign(42)).toThrowError()
+  })
+
   // With no parameters
   test('redesign() to equal []', () => {
     expect(redesign()).toEqual(expect.arrayContaining([]))

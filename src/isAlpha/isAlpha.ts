@@ -4,8 +4,9 @@
  * False- If the string contains 1 or more non-alphabets.
  */
 const isAlpha = (str: string): boolean => {
-  if (typeof str !== 'string') {
-    return false
+  const strType = typeof str
+  if (strType !== 'string') {
+    throw new Error(`isAlpha() is expecting a string, but ${strType} was given.`)
   }
   return /^[a-zA-Z]+$/.test(str)
 }

@@ -21,6 +21,10 @@ const redesign = (
     compact?: boolean
   } = {},
 ): ArrayToRedesignType => {
+  if (!Array.isArray(array)) {
+    throw new Error(`The first argument of redisign() should be an array, whereas ${typeof array} was given.`)
+  }
+
   const deepCopiedArray = JSON.parse(JSON.stringify(array))
   const compactedDeepCopiedArray = compact ? compactArray(deepCopiedArray) : deepCopiedArray
   const filteredArray = compactedDeepCopiedArray.filter(filter)

@@ -1,8 +1,12 @@
 import slugify from '..'
 
 describe('slugify', () => {
-  test('slugify() should return an empty string', () => {
-    expect(slugify()).toEqual('')
+  test('slugify() should throw an error', () => {
+    expect(() => slugify()).toThrowError()
+  })
+
+  test('slugify(42) should throw an error', () => {
+    expect(() => slugify(42)).toThrowError()
   })
 
   test('slugify("") should return an empty string', () => {
