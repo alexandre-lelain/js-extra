@@ -6,7 +6,7 @@
 
 <h1>js-extra</h1>
 
-<p>Does what native Javascript doesn't.</p>
+<p>Does what native JavaScript doesn't.</p>
 
 **[js-extra docs](https://js-extra.netlify.app/)**
 
@@ -33,7 +33,7 @@
 
 ## Motivation
 
-From my humble point of view, **Javascript** is lacking of some very useful small built-in functions some other languages, like Python, have.
+From my humble point of view, **JavaScript** is lacking of some very useful small built-in functions some other languages, like Python, have.
 
 Yes, [**reduce**](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/reduce) and [**map**](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/map) can do quite a lot of things, in quite a lot of situations. They can also often save us in the most desparate situations. But because they are very generic tools, they do not provide a clear straight-forward understanding of what they are used/implemented for.
 
@@ -44,10 +44,10 @@ array.reduce((count, item) => item === itemToCount ? count + 1 : count, 0)
 ```
 
 But let's be honest. Don't you think this is so verbose code for a simple count() ?
-Why is there not a built-in **count** function in Javascript ?
+Why is there not a built-in **count** function in JavaScript ?
 
 This is exactly what **js-extra** is built for. Its aim is to provide explicit functions
-built on top of the native Javascript functions. Since [Lodash](https://lodash.com/)
+built on top of the native JavaScript functions. Since [Lodash](https://lodash.com/)
 already provides many extra functions, the lib will aim to complete it with very
 specific functions.
 
@@ -94,7 +94,7 @@ The API is available here: [js-extra API](https://js-extra.netlify.com/#/api)
 Any contribution would be more than welcome! You think you can optimize the
 algorithms of existing functions ? Please, open a PR! :)
 
-You would like to add a function that Javascript doesn't have natively ? Please,
+You would like to add a function that JavaScript doesn't have natively ? Please,
 go ahead and open a PR! :)
 
 Found any bugs or you have some ideas ? Please, open an issue! :)
