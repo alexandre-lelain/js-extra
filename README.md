@@ -78,7 +78,7 @@ import { count } from 'js-extra'
 
 ES5
 ```js
-var count = require('js-extra').count
+var { count } = require('js-extra')
 ```
 
 You can find all the implemented & available functions of the lib [here](https://js-extra.netlify.com/#/api).
