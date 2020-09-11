@@ -2,15 +2,12 @@ import { prettyTestName } from 'utils'
 import redesign from '../'
 
 import {
-  BOOLEAN_ARRAY,
   COMPACT_ARRAY,
   FALSY_ARRAY,
   NUMBER_ARRAY,
   NUMBER_ODD_ARRAY,
   NUMBER_TRANSFORMED_ARRAY,
-  STRING_ARRAY,
   OBJECT_ARRAY,
-  RANDOM_TYPED_ARRAY,
   REDESIGNED_ARRAY,
   REDESIGNED_ARRAY_WITH_IDS,
 } from './mocks'
@@ -52,7 +49,7 @@ describe('redesign', () => {
   test(
     prettyTestName('redesign(%s, { transform: item => 42 }) to equal %s', NUMBER_ARRAY, NUMBER_TRANSFORMED_ARRAY),
     () => {
-      expect(redesign(NUMBER_ARRAY, { transform: (item) => 42 })).toEqual(NUMBER_TRANSFORMED_ARRAY)
+      expect(redesign(NUMBER_ARRAY, { transform: () => 42 })).toEqual(NUMBER_TRANSFORMED_ARRAY)
     },
   )
 

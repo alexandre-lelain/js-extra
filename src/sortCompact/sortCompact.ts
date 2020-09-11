@@ -1,4 +1,4 @@
-import compact from '../compact'
+import compact, { CompactArrayType, CompactItemType } from '../compact'
 
 export interface IOptions {
   before?: boolean
@@ -12,10 +12,10 @@ export interface IOptions {
  * set the option `withZero` to true.
  */
 const sortCompact = (
-  array: any[],
-  sortFunction?: ((left: any, right: any) => number) | IOptions,
+  array: CompactArrayType,
+  sortFunction?: ((left: CompactItemType, right: CompactItemType) => number) | IOptions,
   options: IOptions = {},
-): any[] => {
+): CompactArrayType => {
   try {
     if (sortFunction && typeof sortFunction !== 'function') {
       return sortCompactGeneric(array, undefined, sortFunction)
@@ -30,10 +30,10 @@ const sortCompact = (
 }
 
 const sortCompactGeneric = (
-  array: any[],
-  sortFunction?: (left: any, right: any) => number,
+  array: CompactArrayType,
+  sortFunction?: (left: CompactItemType, right: CompactItemType) => number,
   options: IOptions = {},
-): any[] => {
+): CompactArrayType => {
   const { before = true, withZero = false } = options
   if (before) {
     const compactedArray = compact(array, withZero)

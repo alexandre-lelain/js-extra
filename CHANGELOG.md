@@ -1,3 +1,15 @@
+# 1.6.0
+
+## Features
+
+* Add `createArray` function. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+* Enhance types to enforce accuracy of expected inputs. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
+## Docs
+
+* Improve docs types. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+* Add Glossary section. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.5.2
 
 ## Docs

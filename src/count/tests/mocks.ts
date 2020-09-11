@@ -11,3 +11,5 @@ export const OBJECT_ARRAY = [
 ]
 
 export const RANDOM_TYPED_ARRAY = [{ id: 1, name: 'js' }, 'TS', { id: 2, name: 'js' }, {}]
+
+export const ARRAY_WITH_FASLEY_VALUES = [42, null, undefined, null]

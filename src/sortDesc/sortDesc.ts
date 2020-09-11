@@ -1,6 +1,7 @@
-import compactArray from '../compact'
+import compactArray, { CompactItemType, CompactArrayType } from '../compact'
 
-export type ArrayToSortDescType = (number | string)[]
+export type ArrayItemDescType = CompactItemType
+export type ArrayToSortDescType = CompactArrayType
 
 /**
  * This function sorts an array of number or string in descending order.
@@ -10,11 +11,11 @@ const sortDesc = (
   { compact = false }: { compact?: boolean } = {},
 ): ArrayToSortDescType => {
   try {
-    const sortedArray = array.sort((a: any, b: any) => {
+    const sortedArray = array.sort((a: ArrayItemDescType, b: ArrayItemDescType) => {
       if (typeof a === 'string' && typeof b === 'string') {
         return b.localeCompare(a)
       }
-      return b - a
+      return (b as number) - (a as number)
     })
     return compact ? compactArray(sortedArray) : sortedArray
   } catch (e) {

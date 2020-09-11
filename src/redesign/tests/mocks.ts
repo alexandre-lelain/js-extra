@@ -8,10 +8,6 @@ export const FALSY_ARRAY = [42, null, 42, false, 'js', undefined]
 
 export const COMPACT_ARRAY = [42, 42, 'js']
 
-export const STRING_ARRAY = ['hello', 'world', 'world', 'JS rocks', 'TS rocks better', 'hello', 'world']
-
-export const BOOLEAN_ARRAY = [true, true, false, true]
-
 export const OBJECT_ARRAY = [
   { id: 1, name: 'js' },
   { id: 2, name: undefined },
@@ -26,5 +22,3 @@ export const REDESIGNED_ARRAY_WITH_IDS = [
   { id: 1, name: 'js-extra' },
   { id: 4, name: 'js-extra' },
 ]
-
-export const RANDOM_TYPED_ARRAY = [{ id: 1, name: 'js' }, 'TS', { id: 2, name: 'js' }]

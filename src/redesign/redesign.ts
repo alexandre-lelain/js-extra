@@ -1,6 +1,6 @@
 import compactArray from '../compact'
 
-export type ArrayItemType = number | string | boolean | object
+export type ArrayItemType = number | string | boolean | undefined | null | Record<string, unknown>
 export type ArrayToRedesignType = ArrayItemType[]
 
 /**

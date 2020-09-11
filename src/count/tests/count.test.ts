@@ -1,6 +1,13 @@
 import { prettyTestName } from 'utils'
 import count from '../'
-import { BOOLEAN_ARRAY, NUMBER_ARRAY, STRING_ARRAY, OBJECT_ARRAY, RANDOM_TYPED_ARRAY } from './mocks'
+import {
+  ARRAY_WITH_FASLEY_VALUES,
+  BOOLEAN_ARRAY,
+  NUMBER_ARRAY,
+  STRING_ARRAY,
+  OBJECT_ARRAY,
+  RANDOM_TYPED_ARRAY,
+} from './mocks'
 
 describe('count', () => {
   test(prettyTestName('count(%s, 1) to equal 2', NUMBER_ARRAY), () => {
@@ -70,21 +77,25 @@ describe('count', () => {
     expect(count(OBJECT_ARRAY, 42)).toBe(0)
   })
 
-  test(prettyTestName('count(%s, () => null to equal 0', OBJECT_ARRAY), () => {
+  test(prettyTestName('count(%s, () => null) to equal 0', OBJECT_ARRAY), () => {
     expect(count(OBJECT_ARRAY, () => null)).toBe(0)
   })
 
-  test(prettyTestName('count(%s, () => true to equal OBJECT_ARRAY.length', OBJECT_ARRAY), () => {
+  test(prettyTestName('count(%s, () => true) to equal OBJECT_ARRAY.length', OBJECT_ARRAY), () => {
     expect(count(OBJECT_ARRAY, () => true)).toBe(OBJECT_ARRAY.length)
   })
 
   // any[]
-  test(prettyTestName('count(%s, (item) => item.name === "js" to equal 2', RANDOM_TYPED_ARRAY), () => {
+  test(prettyTestName('count(%s, (item) => item.name === "js") to equal 2', RANDOM_TYPED_ARRAY), () => {
     expect(count(RANDOM_TYPED_ARRAY, (item) => item.name === 'js')).toBe(2)
   })
 
-  test(prettyTestName('count(%s, "TS" to equal 2', RANDOM_TYPED_ARRAY), () => {
+  test(prettyTestName('count(%s, "TS") to equal 2', RANDOM_TYPED_ARRAY), () => {
     expect(count(RANDOM_TYPED_ARRAY, 'TS')).toBe(1)
+  })
+
+  test(prettyTestName('count(%s, null) to equal 2', ARRAY_WITH_FASLEY_VALUES), () => {
+    expect(count(ARRAY_WITH_FASLEY_VALUES, null)).toBe(2)
   })
 
   //Exceptions tests

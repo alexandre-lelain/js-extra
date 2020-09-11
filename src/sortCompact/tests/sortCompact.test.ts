@@ -14,7 +14,7 @@ import {
 
 describe('sortCompact', () => {
   test('sortCompact({}, () => {}) throws an error on the array type.', () => {
-    expect(() => sortCompact({}, () => {})).toThrow()
+    expect(() => sortCompact({}, () => undefined)).toThrow()
   })
 
   test(prettyTestName('sortCompact(%s) should return %s', FALSEY_ARRAY, FALSEY_NUMBER_ARRAY_SORTED_DEFAULT), () => {

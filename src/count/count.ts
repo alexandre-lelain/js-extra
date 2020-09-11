@@ -1,6 +1,7 @@
 export type CountType = number | null
-export type CountArrayType = (number | string | boolean | object)[]
-export type ItemToCountType = number | string | boolean
+export type ObjectType = Record<string, ItemToCountType>
+export type CountArrayType = (ItemToCountType | ObjectType)[]
+export type ItemToCountType = number | string | boolean | null | undefined
 
 /**
  * This function counts and returns the number of occurences of the value
@@ -8,7 +9,7 @@ export type ItemToCountType = number | string | boolean
  */
 const count = (
   array: CountArrayType,
-  toCount: ItemToCountType | ((item: ItemToCountType | object) => boolean),
+  toCount: ItemToCountType | ((item: ItemToCountType | ObjectType) => boolean),
 ): CountType => {
   try {
     if (toCount instanceof Function) {
@@ -28,13 +29,19 @@ const count = (
   }
 }
 
-const countByPredicate = (array: CountArrayType, toCount: (item: ItemToCountType | object) => boolean): CountType => {
-  return array.reduce((itemCounts: number, item: ItemToCountType | object) => (itemCounts += toCount(item) ? 1 : 0), 0)
+const countByPredicate = (
+  array: CountArrayType,
+  toCount: (item: ItemToCountType | ObjectType) => boolean,
+): CountType => {
+  return array.reduce(
+    (itemCounts: number, item: ItemToCountType | ObjectType) => (itemCounts += toCount(item) ? 1 : 0),
+    0,
+  )
 }
 
 const countElement = (array: CountArrayType, itemToCount: ItemToCountType): CountType => {
   return array.reduce(
-    (itemCounts: number, item: ItemToCountType | object) => (itemCounts += item === itemToCount ? 1 : 0),
+    (itemCounts: number, item: ItemToCountType | ObjectType) => (itemCounts += item === itemToCount ? 1 : 0),
     0,
   )
 }
