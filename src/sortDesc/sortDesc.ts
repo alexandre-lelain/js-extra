@@ -1,7 +1,7 @@
-import compactArray, { CompactItemType, CompactArrayType } from '../compact'
+import compactArray from '../compact'
 
-export type ArrayItemDescType = CompactItemType
-export type ArrayToSortDescType = CompactArrayType
+export type ArrayItemDescType = number | string | boolean | null | undefined
+export type ArrayToSortDescType = ArrayItemDescType[]
 
 /**
  * This function sorts an array of number or string in descending order.

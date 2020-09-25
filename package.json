@@ -28,7 +28,7 @@
     "helpers"
   ],
   "scripts": {
-    "build": "yarn build:esm && yarn build:cjs",
+    "build": "rimraf lib && yarn build:esm && yarn build:cjs",
     "build:esm": "tsc -m es6 --outDir lib/esm",
     "build:cjs": "tsc -m commonjs --outDir lib",
     "docs": "yarn docsify serve docs",
@@ -52,6 +52,7 @@
     "marked": "^1.1.1",
     "prettier": "^2.1.1",
     "pretty-quick": "^3.0.2",
+    "rimraf": "^3.0.2",
     "ts-jest": "^26.3.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.0.2"

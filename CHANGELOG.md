@@ -1,3 +1,9 @@
+# 1.6.1
+
+## Fixes
+
+* Fix types in `sortAsc`, `sortDesc` and `sortCompact`. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.6.0
 
 ## Features
