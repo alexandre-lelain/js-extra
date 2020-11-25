@@ -1,4 +1,4 @@
-export default (text: string, received: any, expected: any, test: ) => {
+export default (text: string, received: any, expected: any) => {
   let stringyfiedReceived = received;
   let stringyfiedExpected = expected;
   try {
