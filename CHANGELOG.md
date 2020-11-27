@@ -1,3 +1,9 @@
+# 1.7.0
+
+## Features
+
+* Add `arrayToObjectBy`, `isCollection`, `objectToArrayBy`, `merge` and `mergeBy` functions. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.6.1
 
 ## Fixes
