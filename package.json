@@ -38,7 +38,7 @@
     "prepublishOnly": "yarn validate",
     "preversion": "yarn validate",
     "postversion": "git push && git push --tags",
-    "test": "jest",
+    "test": "jest --silent",
     "version": "yarn prettier && git add -vA src"
   },
   "devDependencies": {

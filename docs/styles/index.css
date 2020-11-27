@@ -19,11 +19,15 @@
   margin: 64px auto;
 }
 
+#api-content h2 {
+  margin-top: 64px;
+}
+
 #api-content h3 {
   background-color: lightblue;
   padding: 16px;
 }
 
 #api-content h3:not(:first-of-type) {
-  margin-top: 64px;
+  margin-top: 48px;
 }

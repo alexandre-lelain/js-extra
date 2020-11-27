@@ -1,4 +1,4 @@
-<div id="api-content">
+<div id='api-content'>
 
 # **API**
 
@@ -9,6 +9,38 @@ This page lists all the functions **js-extra** offers.
 - **primitive**: refers to any primitive type: `number | string | boolean | null | undefined`
 
 ## **Array**
+
+### arrayToObjectBy(array, property)
+
+Takes an **array** of objects, and the **property** you want to use as the **key** to convert it into a
+collection of objects. Useful, for example, when you want to convert an array of entities into a
+collection with the entities'id as key.
+
+**Note**: this method does **not** mutate the given array.
+
+#### Arguments
+
+- **array *(Array)***: the array to turn into a collection.
+- **property *(string)***: the property to use as a key in the first level of the resulted collection.
+
+#### returns
+
+- ***(Object)***: returns the resulted **Collection** made of the array's objects, minus the given property.
+
+#### Examples
+
+```js
+arrayToObjectBy([{ id: 1, name: 'js-extra' }], 'id');
+// => { 1: { name: 'js-extra' } }
+arrayToObjectBy([
+  { userId: 1, name: 'js-extra' },
+  { userId: 2, name: '42' },
+], 'userId');
+/* => { 
+  1: { name: 'js-extra' },
+  2: { name: '42' }
+}*/
+```
 
 ### compact(array, withZero)
 
@@ -58,9 +90,9 @@ count([4, 2, 3, 4], 4);
 // => 2
 count([4, 2, 3, 4], 42);
 // => 0
-count(["js-extra", "rocks", "hello", "js-extra", "js-extra"], "js-extra");
+count(['js-extra', 'rocks', 'hello', 'js-extra', 'js-extra'], 'js-extra');
 // => 3
-count([{ id: 1, name: "js" }, { id: 2, name: "extra" }, { id: 3, name: "js" }], item => item.name === "js");
+count([{ id: 1, name: 'js' }, { id: 2, name: 'extra' }, { id: 3, name: 'js' }], item => item.name === 'js');
 // => 2
 count([1, 2, 3, 4, 5], item => item > 2);
 // => 3
@@ -93,10 +125,48 @@ createArray(3);
 // => [undefined, undefined, undefined]
 createArray(3, 42);
 // => [42, 42, 42]
-createArray(3, { jsExtra: "rocks" });
-// => [{ jsExtra: "rocks" }, { jsExtra: "rocks" }, { jsExtra: "rocks" }]
+createArray(3, { jsExtra: 'rocks' });
+// => [{ jsExtra: 'rocks' }, { jsExtra: 'rocks' }, { jsExtra: 'rocks' }]
 ```
 
+### mergeBy(property, ...arrays)
+
+**Deep** merge arrays of objects based on the given **property**. Source arrays are applied from left to right, so
+the last array given as an argument to the function will have the higher priority. For example, it can
+be useful when you want to merge multiple arrays containing objects that represent the same entity type.
+
+**Notes:** the function does **not** mute the given arrays.
+
+#### Arguments
+
+- **property *(string)***: the property that identifies your arrays' objects, which is used to know to deep merge them.
+- **...Array**: the arrays of objects you want to merge.
+
+#### returns
+
+- ***(Array)***: returns the array of deep-merged objects.
+
+#### Examples
+```js
+mergeBy('id', [{ id: 1, name: 'js-extra'}], [{ id: 1, isCool: true }]);
+// => [{ id: 1, name: 'js-extra', isCool: true }]
+mergeBy('projectId',
+  [
+    { projectId: 1, name: 'js-extra', project: 'github' },
+    { projectId: 2, name: '42', project: 'secret' }
+  ],
+  [
+    { projectId: 1, name: 'new-js-extra' },
+    { projectId: 2, project: 'not-so-secret' }
+    { projectId: 3, name: 'extra-js', project: 'gitlab' }
+  ]
+);
+/* => [
+  { projectId: 1, name: 'new-js-extra', project: 'github' }, 
+  { projectId: 2, name: '42', project: 'not-so-secret' },
+  { projectId: 3, name: 'extra-js', project: 'gitlab' }
+]*/
+```
 
 ### redesign(array, [options={}])
 
@@ -132,9 +202,9 @@ redesign([1, 2, 5, 15, 3 ,9], { filter: n => n > 3, transform: n => n - 1 });
 redesign([42, 'js', null, 'extra', undefined, false], { transform: n => n + 42, compact: true });
 // => [84, 'js42', 'extra42']
 
-const array = [{ id: 1, name: "js" }, { id: 2, name: "extra" }, { id: 3, name: "js" }]
-redesign(array, { filter: item => item.name === "js", transform: item => ({ ...item, name: item.name + '-extra' }) });
-// => [{ id: 1, name: "js-extra" }, { id: 3, name: "js-extra" }]
+const array = [{ id: 1, name: 'js' }, { id: 2, name: 'extra' }, { id: 3, name: 'js' }]
+redesign(array, { filter: item => item.name === 'js', transform: item => ({ ...item, name: item.name + '-extra' }) });
+// => [{ id: 1, name: 'js-extra' }, { id: 3, name: 'js-extra' }]
 ```
 
 ### sortAsc(array, [options={}])
@@ -157,8 +227,8 @@ are compared using [localeCompare()](https://developer.mozilla.org/fr/docs/Web/J
 ```js
 sortAsc([4, 2, 3, 5, 4]);
 // => [2, 3, 4, 4, 5]
-sortAsc(["a", "z", "e", "c", "h"]);
-// => ["a", "c", "e", "h", "z"]
+sortAsc(['a', 'z', 'e', 'c', 'h']);
+// => ['a', 'c', 'e', 'h', 'z']
 sortAsc([4, 0, 2, null, 5, undefined, 4], { compact: true });
 // => [0, 2, 4, 4, 5]
 ```
@@ -213,94 +283,10 @@ are compared using [localeCompare()](https://developer.mozilla.org/fr/docs/Web/J
 ```js
 sortDesc([4, 2, 3, 5, 4]);
 // => [5, 4, 4, 3, 2]
-sortDesc(["a", "z", "e", "c", "h"]);
-// => [ "z", "h", "e", "c", "a" ]
+sortDesc(['a', 'z', 'e', 'c', 'h']);
+// => [ 'z', 'h', 'e', 'c', 'a' ]
 sortDesc([4, 0, 2, null, 5, undefined, 4], { compact: true });
 // => [5, 4, 4, 2, 0]
-```
-
-## **String**
-
-
-### isAlpha(text)
-
-This function returns *true* if the string provided contains only alphabetical characters,
-*false* else.
-
-#### Arguments
-
-- **text *(string)***: the string to process.
-
-#### returns
-
-- ***(boolean)***: returns *true* if **text** only contains alphabetical characters, *false* else.
-
-#### Examples
-
-```js
-isAlpha("jsextrarocks");
-// => true
-isAlpha("jsextrarocks42");
-// => false
-isAlpha(42);
-// => false
-```
-
-### isDigit(text)
-
-This function returns *true* if the string provided contains only digits,
-*false* else.
-
-#### Arguments
-
-- **text *(string)***: the string to process.
-
-#### returns
-
-- ***(boolean)***: returns *true* if **text** only contains digits, *false* else.
-
-#### Examples
-
-```js
-isDigit("42");
-// => true
-isDigit("jsextrarocks42");
-// => false
-isDigit("");
-// => false
-```
-
-### slugify(text, [withHash=false])
-
-Slugifies a text to make it a valid url hash. Can be pretty useful when you are compiling
-markdown code to HTML and want to make your titles become anchors, with a valid
-and standard url hash.
-
-For example, if you have a title `"The best number: 42"`, **slugify** will transform it
-into `"the-best-number-42"`.
-
-It will return an **empty string** if you provide it with a *falsy* text.
-
-#### Arguments
-
-- **text *(string)***: the string to process.
-- **[withHash = false] *(boolean)***: Pass `true` if you want to prefix the slug with `#`.
-
-#### returns
-
-- ***(string)***: returns the slug.
-
-#### Examples
-
-```js
-slugify();
-// => ""
-slugify("hello.world")
-// => "hello-world"
-slugify("Hello, World ?")
-// => "hello-world"
-slugify("$Hello? World$ ,Space", true)
-// => "#hello-world-space"
 ```
 
 ## **Browser**
@@ -321,13 +307,13 @@ This function returns *true* if the string provided is an [hex color](https://ww
 #### Examples
 
 ```js
-isHexColor("fff");
+isHexColor('fff');
 // -> true
-isHexColor("#e4e4e4");
+isHexColor('#e4e4e4');
 // -> true
-isHexColor("#e4");
+isHexColor('#e4');
 // -> false
-isHexColor("#e123");
+isHexColor('#e123');
 // -> false
 ```
 
@@ -349,12 +335,194 @@ No arguments.
 #### Examples
 
 ```js
-isSSR(); // if typeof window === "undefined".
+isSSR(); // if typeof window === 'undefined'.
 // => true
 isSSR(); // if you're running JS code in the browser (or any environment with the global window object defined).
 // => false
 ```
 
+## **Collection**
 
+### isCollection(value)
+
+Since everything is an object in JavaScript, it's pretty hard to check accurately and easily if a given object is a **Collection**:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object.
+
+This is why **isCollection()** was made: it will return *true* if the given **value** is a Collection with a set of properties. *false*, else.
+
+#### Arguments
+
+- **value *(any)***: the value to process.
+
+#### returns
+
+- ***(boolean)***: returns *true* if **value** is a **Collection**, *false* else.
+
+#### Examples
+
+```js
+isCollection(42);
+// => false
+isCollection(['js', 'extra']);
+// => false
+isCollection({ name: 'js-extra' });
+// => true
+```
+
+### merge(...collections)
+
+**Deep merge** multiple objects and their enumerable properties. Source objects are applied from left to right, so
+the last object given as an argument to the function will have the higher priority.
+
+**Note:** this function does **not** mutate the given objects.
+
+#### Arguments
+
+- **...Object**: the collections to merge.
+
+#### returns
+
+- ***(Object)***: returns the deep merge of all the collections provided.
+
+#### Examples
+
+```js
+merge({ name: 'js-extra'}, { name: '42' }, { project: 'github' });
+// => { name: '42', project: 'github' }
+merge(
+  { id: 1, name: 'js-extra', project: 'github', location: { planet: 'moon', street: 'noop' } },
+  { id: 1, name: '42', project: 'github', location: { planet: 'earth', number: 16 } }
+);
+/* => {
+  id: 1, name: '42', project: 'github', location: { planet: 'earth', street: 'noop', number: 16 }
+}*/
+// => true
+```
+
+### objectToArrayBy(collection, property)
+
+Turns a collection of objects into an array of objects. The **property** given to the function will take the keys
+of the collection's **first** level as a value.
+
+**Note**: this method does **not** mutate the given object.
+
+For **TypeScript** users, if your collection's type is `Record<string, UserInterface>`, then the resulting array will be of type:
+
+```typescript
+interface ResultedUserInterface extends UserInterface {
+  [property]: string
+}
+
+type ResultedArrayType = ResultedUserInterface[]
+```
+
+#### Arguments
+
+- **collection *(Object)***: the collection to turn into an array.
+- **property *(string)***: the property to assign the 1st-level keys to.
+
+#### returns
+
+- ***(Array\<Object\>)***: returns the formatted array made of objects which now also contain the given `property`.
+
+#### Examples
+
+```js
+objectToArrayBy({ 1: { name: 'js-extra' }}, 'id');
+// => [{ id: '1', name: 'js-extra' }]
+objectToArrayBy({ 
+  1: { firstName: 'js', givenName: 'extra' },
+  2: { firstName: '42', givenName: 'none' }
+}, 'userId');
+/** => 
+[
+  { userId: '1', firstName: 'js', givenName: 'extra' },
+  { userId: '2', firstName: '42', givenName: 'none' },
+]
+*/
+```
+
+## **String**
+
+### isAlpha(text)
+
+This function returns *true* if the string provided contains only alphabetical characters,
+*false* else.
+
+#### Arguments
+
+- **text *(string)***: the string to process.
+
+#### returns
+
+- ***(boolean)***: returns *true* if **text** only contains alphabetical characters, *false* else.
+
+#### Examples
+
+```js
+isAlpha('jsextrarocks');
+// => true
+isAlpha('jsextrarocks42');
+// => false
+isAlpha(42);
+// => false
+```
+
+### isDigit(text)
+
+This function returns *true* if the string provided contains only digits,
+*false* else.
+
+#### Arguments
+
+- **text *(string)***: the string to process.
+
+#### returns
+
+- ***(boolean)***: returns *true* if **text** only contains digits, *false* else.
+
+#### Examples
+
+```js
+isDigit('42');
+// => true
+isDigit('jsextrarocks42');
+// => false
+isDigit('');
+// => false
+```
+
+### slugify(text, [withHash=false])
+
+Slugifies a text to make it a valid url hash. Can be pretty useful when you are compiling
+markdown code to HTML and want to make your titles become anchors, with a valid
+and standard url hash.
+
+For example, if you have a title `'The best number: 42'`, **slugify** will transform it
+into `'the-best-number-42'`.
+
+It will return an **empty string** if you provide it with a *falsy* text.
+
+#### Arguments
+
+- **text *(string)***: the string to process.
+- **[withHash = false] *(boolean)***: Pass `true` if you want to prefix the slug with `#`.
+
+#### returns
+
+- ***(string)***: returns the slug.
+
+#### Examples
+
+```js
+slugify();
+// => ''
+slugify('hello.world')
+// => 'hello-world'
+slugify('Hello, World ?')
+// => 'hello-world'
+slugify('$Hello? World$ ,Space', true)
+// => '#hello-world-space'
+```
 
 </div>

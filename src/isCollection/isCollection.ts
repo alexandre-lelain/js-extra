@@ -1,7 +1,7 @@
 /**
  * Since everything is an object in JS, it's pretty hard to check if a
  * given object is a collection: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object.
- * This function will return true if the object given is a collection with a set of properties.
+ * This function will return true if the given value is a collection with a set of properties.
  *
  * Ex: isCollection({ js: 'extra' }) => true
  */

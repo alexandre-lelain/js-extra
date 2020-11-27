@@ -4,9 +4,9 @@ const destination = {
   id: 1,
   name: 'js-extra',
   age: 25,
-  dislikes: 'grass',
+  project: 'github',
   location: {
-    city: 'moon',
+    planet: 'moon',
     street: 'noop',
   },
 }
@@ -17,7 +17,7 @@ const source = {
   age: 42,
   likes: 'lasagnas',
   location: {
-    city: 'earth',
+    planet: 'earth',
     number: 16,
   },
 }
@@ -30,10 +30,10 @@ const merged = {
   id: 1,
   name: 'hello-world',
   age: 42,
-  dislikes: 'grass',
+  project: 'github',
   likes: 'lasagnas',
   location: {
-    city: 'earth',
+    planet: 'earth',
     street: 'noop',
     number: 16,
   },
@@ -44,6 +44,13 @@ const otherMerged = { ...merged, id: 42 }
 describe('merge()', () => {
   test('merge() should return {}', () => {
     expect(merge()).toEqual({})
+  })
+
+  test('merge({ name: "js-extra"}, { name: "42" }, { project: "github" }) should return { name: "42", project: "github" }', () => {
+    expect(merge({ name: 'js-extra' }, { name: '42' }, { project: 'github' })).toEqual({
+      name: '42',
+      project: 'github',
+    })
   })
 
   test('merge(destination) should return destination', () => {

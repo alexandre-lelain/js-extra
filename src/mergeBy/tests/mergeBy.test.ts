@@ -1,80 +1,33 @@
 import mergeBy from '../mergeBy'
-
-const destination = [
-  {
-    id: '1',
-    name: 'js-extra',
-    avatar: 'totocap',
-    location: {
-      city: 'Berlin',
-      country: 'Germany',
-    },
-  },
-  {
-    abc: 'something',
-    ok: 'doh',
-  },
-  {
-    id: '2',
-    name: 'Totocap',
-  },
-  {
-    id: '4',
-    name: 'Voyou',
-    notes: 'something',
-  },
-]
-
-const source = [
-  {
-    id: '1',
-    name: 'New JsExtra',
-    location: {
-      city: 'Munich',
-    },
-  },
-  {
-    id: '2',
-    name: 'Totocap',
-  },
-  {
-    id: '3',
-    name: 'User',
-  },
-  {
-    id: '4',
-    name: 'NewVoyou',
-  },
-]
-
-const merged = [
-  {
-    id: '1',
-    name: 'New JsExtra',
-    avatar: 'totocap',
-    location: {
-      city: 'Munich',
-      country: 'Germany',
-    },
-  },
-  {
-    id: '2',
-    name: 'Totocap',
-  },
-  {
-    id: '3',
-    name: 'User',
-  },
-  {
-    id: '4',
-    name: 'NewVoyou',
-    notes: 'something',
-  },
-]
+import { destination, destinationMergedById, source, merged } from './mocks'
 
 describe('mergeBy()', () => {
   test('mergeBy() should throw an error', () => {
     expect(() => mergeBy()).toThrow()
+  })
+
+  test('mergeBy(42) should throw an error', () => {
+    expect(() => mergeBy(42)).toThrow()
+  })
+
+  test('mergeBy("id", 42) should throw an error', () => {
+    expect(() => mergeBy('id', 42)).toThrow()
+  })
+
+  test('mergeBy("id", [], {}) should throw an error', () => {
+    expect(() => mergeBy('id', [], {})).toThrow()
+  })
+
+  test('mergeBy("id", [], []) should return []', () => {
+    expect(mergeBy('id', [], [])).toEqual([])
+  })
+
+  test('mergeBy("unknown-key", destination) should return []', () => {
+    expect(mergeBy('unknown-key', destination)).toEqual([])
+  })
+
+  test('mergeBy("id", destination) should return destinationMergedById', () => {
+    expect(mergeBy('id', destination)).toEqual(destinationMergedById)
   })
 
   test('mergeBy("id", destination, source) should return merged', () => {
