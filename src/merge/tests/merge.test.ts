@@ -1,49 +1,13 @@
 import merge from '../merge'
-
-const destination = {
-  id: 1,
-  name: 'js-extra',
-  age: 25,
-  project: 'github',
-  location: {
-    planet: 'moon',
-    street: 'noop',
-  },
-}
-
-const source = {
-  id: 1,
-  name: 'hello-world',
-  age: 42,
-  likes: 'lasagnas',
-  location: {
-    planet: 'earth',
-    number: 16,
-  },
-}
-
-const otherSource = {
-  id: 42,
-}
-
-const merged = {
-  id: 1,
-  name: 'hello-world',
-  age: 42,
-  project: 'github',
-  likes: 'lasagnas',
-  location: {
-    planet: 'earth',
-    street: 'noop',
-    number: 16,
-  },
-}
-
-const otherMerged = { ...merged, id: 42 }
+import { destination, source, otherSource, merged, otherMerged } from './mocks'
 
 describe('merge()', () => {
   test('merge() should return {}', () => {
     expect(merge()).toEqual({})
+  })
+
+  test('merge({ name: "js-extra" }, { name: undefined }) should return { name: "js-extra" }', () => {
+    expect(merge({ name: 'js-extra' }, { name: undefined })).toEqual({ name: 'js-extra' })
   })
 
   test('merge({ name: "js-extra"}, { name: "42" }, { project: "github" }) should return { name: "42", project: "github" }', () => {

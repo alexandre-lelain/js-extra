@@ -21,7 +21,9 @@ const merge = <T extends ObjectI[]>(...objects: T): TUnionToIntersection<T[numbe
       } else if (isCollection(result[key]) && isCollection(current[key])) {
         result[key] = merge(result[key], current[key])
       } else {
-        result[key] = current[key]
+        if (current[key] !== undefined) {
+          result[key] = current[key]
+        }
       }
     })
 

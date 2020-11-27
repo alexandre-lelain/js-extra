@@ -135,6 +135,8 @@ createArray(3, { jsExtra: 'rocks' });
 the last array given as an argument to the function will have the higher priority. For example, it can
 be useful when you want to merge multiple arrays containing objects that represent the same entity type.
 
+Properties with an `undefined` value will not override properties of previous sources.
+
 **Notes:** the function does **not** mute the given arrays.
 
 #### Arguments
@@ -373,6 +375,8 @@ isCollection({ name: 'js-extra' });
 
 **Deep merge** multiple objects and their enumerable properties. Source objects are applied from left to right, so
 the last object given as an argument to the function will have the higher priority.
+
+Properties with an `undefined` value will not override properties of previous sources.
 
 **Note:** this function does **not** mutate the given objects.
 

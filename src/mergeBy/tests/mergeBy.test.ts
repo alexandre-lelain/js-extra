@@ -22,6 +22,12 @@ describe('mergeBy()', () => {
     expect(mergeBy('id', [], [])).toEqual([])
   })
 
+  test('mergeBy("id", [{ id: 1, name: "js-extra" }], [{ id: 1, name: undefined }]) should return [{ id: 1, name: "js-extra" }]', () => {
+    expect(mergeBy('id', [{ id: 1, name: 'js-extra' }], [{ id: 1, name: undefined }])).toEqual([
+      { id: '1', name: 'js-extra' },
+    ])
+  })
+
   test('mergeBy("unknown-key", destination) should return []', () => {
     expect(mergeBy('unknown-key', destination)).toEqual([])
   })

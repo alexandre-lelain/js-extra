@@ -1,3 +1,9 @@
+# 1.7.1
+
+## Fixes
+
+* `undefined` properties no longer overwrite previous properties in `merge` & `mergeBy`. ([@alexandre-lelain](https://github.com/alexandre-lelain))
+
 # 1.7.0
 
 ## Features
